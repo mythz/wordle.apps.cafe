@@ -48,7 +48,7 @@ jobs:
         run: npm run build
 
       - name: Create CNAME file
-        run: echo "wordle.apps.cafe" > ./dist/CNAME
+        run: echo "${{ github.event.repository.name }}" > ./dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
